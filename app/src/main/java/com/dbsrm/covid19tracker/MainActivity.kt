@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    val latestMessagesMap = HashMap<String, Details>()
+    val latestDataMap = HashMap<String, Details>()
     val adapter = GroupAdapter<GroupieViewHolder>()
 
 
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
                 runOnUiThread {
                     adapter.add(Totaldata())
-                    latestMessagesMap.values.forEach {
+                    latestDataMap.values.forEach {
                         adapter.add(adddata(it))
                     }
                 }
