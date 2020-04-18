@@ -21,12 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerViewMain.adapter = adapter
-
         fetchJson()
-
-        latestMessagesMap.values.forEach {
-            adapter.add(adddata(it))
-        }
     }
 
     class adddata(val details: Details): Item<GroupieViewHolder>(){
@@ -36,13 +31,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-            viewHolder.itemView.dataView1.text = details.state
+            viewHolder.itemView.dataView1.text = details.state.toString()
         }
 
     }
     val latestMessagesMap = HashMap<String, Details>()
     val adapter = GroupAdapter<GroupieViewHolder>()
 
+
+    class Totaldata(): Item<GroupieViewHolder>(){
+
+        override fun getLayout(): Int {
+            return R.layout.main_data_card
+        }
+
+        override fun bind(viewHolder: GroupieViewHolder, position: Int) {
+
+        }
+
+    }
     private fun fetchJson() {
         val url = "https://api.covid19india.org/data.json"
         val request = Request.Builder().url(url).build()
@@ -61,6 +68,13 @@ class MainActivity : AppCompatActivity() {
                 println(body)
                 val gson = GsonBuilder().create()
                 val feed = gson.fromJson(body,Feed::class.java)
+
+                runOnUiThread {
+                    adapter.add(Totaldata())
+                    latestMessagesMap.values.forEach {
+                        adapter.add(adddata(it))
+                    }
+                }
             }
         })
     }
