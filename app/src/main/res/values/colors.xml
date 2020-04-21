@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="home">#efb1ff</color>
+    <color name="activity">#4fad4b</color>
+    <color name="favorites">#e73a60</color>
+    <color name="settings">#ffa34d</color>
 </resources>

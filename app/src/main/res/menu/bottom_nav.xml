@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:cnb_iconColor="@color/home" />
+
+    <item
+        android:id="@+id/tracker"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        android:title="Tracker"
+        app:cnb_iconColor="@color/settings" />
+
+    <item
+        android:id="@+id/self_assess"
+        android:icon="@drawable/ic_assignment_ind_black_24dp"
+        android:title="Self Assess"
+        app:cnb_iconColor="@color/activity" />
+
+    <item
+        android:id="@+id/safety"
+        android:icon="@drawable/ic_accessibility_black_24dp"
+        android:title="Safety"
+        app:cnb_iconColor="@color/favorites" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_settings"
+        android:title="About"
+        app:cnb_iconColor="@color/favorites" />
+</menu>
