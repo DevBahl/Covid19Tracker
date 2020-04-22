@@ -12,22 +12,22 @@
         android:id="@+id/tracker"
         android:icon="@drawable/ic_assessment_black_24dp"
         android:title="Tracker"
-        app:cnb_iconColor="@color/settings" />
+        app:cnb_iconColor="@color/tracker" />
 
     <item
         android:id="@+id/self_assess"
         android:icon="@drawable/ic_assignment_ind_black_24dp"
         android:title="Self Assess"
-        app:cnb_iconColor="@color/activity" />
+        app:cnb_iconColor="@color/selfassess" />
 
     <item
         android:id="@+id/safety"
         android:icon="@drawable/ic_accessibility_black_24dp"
         android:title="Safety"
-        app:cnb_iconColor="@color/favorites" />
+        app:cnb_iconColor="@color/safety" />
     <item
         android:id="@+id/about"
         android:icon="@drawable/ic_settings"
         android:title="About"
-        app:cnb_iconColor="@color/favorites" />
+        app:cnb_iconColor="@color/about" />
 </menu>
