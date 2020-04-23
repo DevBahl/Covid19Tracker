@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Covid19Tracker</string>
+    <string name="string_picker_dialog_values">STRING_PICKER_DIALOG_VALUES</string>
+    <string name="string_picker_dialog_title">StringPickerDialog</string>
+    <string name="string_picker_dialog_ok">OK</string>
+    <string name="string_picker_dialog_cancel">Cancel</string>
 </resources>

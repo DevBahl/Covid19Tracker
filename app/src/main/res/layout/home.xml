@@ -26,6 +26,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <hotchemi.stringpicker.StringPicker
+                android:id="@+id/string_picker"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.145" />
+
+            <TextView
+                android:id="@+id/stateChosen"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="State"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@+id/string_picker"
+                app:layout_constraintStart_toStartOf="@+id/string_picker"
+                app:layout_constraintTop_toBottomOf="@+id/string_picker" />
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="110dp"
@@ -40,6 +62,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView16"
                 android:layout_width="160dp"
                 android:layout_height="30dp"
                 android:text="Are You Feeling Sick?"
@@ -59,9 +82,9 @@
             android:layout_below="@+id/constraintLayout2"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/bottom_nav_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,8 +94,9 @@
                 android:id="@+id/textView11"
                 android:layout_width="130dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Symptoms"
+                android:gravity="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +104,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:src="@drawable/whologo"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
@@ -88,37 +123,149 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/back1" />
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/back1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Fever"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView"
+                        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView"
+                        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAnimationView"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView"
+                        app:layout_constraintVertical_bias="0.228"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/temp" />
 
                     <ImageView
+                        android:id="@+id/imageView3"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/back1" />
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/back1"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAnimationView4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                        app:layout_constraintHorizontal_bias="0.48"
+                        app:layout_constraintStart_toStartOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3"
+                        app:layout_constraintVertical_bias="0.228"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/tired" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Tiredness"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView4"
+                        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView4"
+                        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView4" />
 
                     <ImageView
+                        android:id="@+id/imageView4"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/back1" />
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/back1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Dry Cough"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView2"
+                        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView2"
+                        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAnimationView2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                        app:layout_constraintHorizontal_bias="0.48"
+                        app:layout_constraintStart_toStartOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.228"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/fever" />
 
                     <ImageView
+                        android:id="@+id/imageView5"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/back1" />
-                </LinearLayout>
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/back1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Body Ache"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView3"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView3"
+                        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView3" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAnimationView3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/imageView5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.228"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
 
 
@@ -135,19 +282,34 @@
 
                 <TextView
                     android:id="@+id/textView12"
-                    android:layout_width="190dp"
+                    android:layout_width="150dp"
                     android:layout_height="30dp"
                     android:gravity="center"
+                    android:layout_marginTop="10dp"
                     android:text="Do your own test?"
                     android:textColor="#000000"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.96"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button"
+                    app:layout_constraintEnd_toStartOf="@+id/button"
+                    app:layout_constraintHorizontal_bias="0.181"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/taketest" />
+
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/test_btn_back"
@@ -175,6 +337,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/donatePMCaresFund_btn"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginLeft="20dp"
@@ -202,16 +365,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView15"
                 android:layout_width="220dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="45dp"
-                android:text="Donate to the PM cares fund and help fight this virus"
+                android:text="Donate to the PM cares fund
+                and help fight this virus"
                 android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="@+id/textView14"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView14"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:background="@drawable/bottom_nav_back"
+                android:src="@drawable/narendramodi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_oval="true" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
