@@ -1,7 +1,10 @@
 package com.dbsrm.covid19tracker
 
+import android.Manifest.permission.CALL_PHONE
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,15 +12,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
-import hotchemi.stringpicker.StringPicker
-import hotchemi.stringpicker.StringPickerDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.recycler_home.*
+import java.util.jar.Manifest
 import kotlin.concurrent.fixedRateTimer
 
 class Home: Fragment() {
@@ -33,17 +38,10 @@ class Home: Fragment() {
             fragmentManager?.beginTransaction()?.replace(R.id.container, donatefunds)?.commit()
         }
 
-      /*  val dialog = StringPickerDialog()
-        val bundle = Bundle()
-        val values = arrayOf("a", "b", "c", "d", "e", "f")
-        bundle.putStringArray(getString(R.string.string_picker_dialog_values), values)
-        dialog.arguments = bundle
-        dialog.show(fragmentManager!!, ContentValues.TAG)
-
-        StringPickerDialog.OnClickListener{
-            fun onClick() {
-                stateChosen.setText(it)
-            }
-        }*/
+        callnow_btn.setOnClickListener {
+            val phoneIntent = Intent(Intent.ACTION_DIAL)
+            phoneIntent.setData(Uri.parse("tel:+91-11-23978046"))
+            startActivity(phoneIntent)
+        }
     }
 }
