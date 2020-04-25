@@ -49,15 +49,15 @@ class Otp: Fragment() {
             override fun onVerificationFailed(e: FirebaseException) {
 
                 Log.d("this1","Verification Failed because $e")
-             /*   if (e is FirebaseAuthInvalidCredentialsException){
-                    // Toast.makeText(this@OTPVerification,"Wrong OTP",Toast.LENGTH_SHORT).show()
-                    //
+                if (e is FirebaseAuthInvalidCredentialsException){
+                    Toast.makeText(context,"Please check your phone number",Toast.LENGTH_SHORT).show()
+                    return
                 }
 
                 else if(e is FirebaseTooManyRequestsException) {
-                    //   Toast.makeText(this@OTPVerification,"Error! Try again after some time", Toast.LENGTH_SHORT).show()
-                    //return
-                }*/
+                    Toast.makeText(context,"Error! Try again after some time", Toast.LENGTH_SHORT).show()
+                    return
+                }
             }
             override fun onCodeSent(verificationId: String,token: PhoneAuthProvider.ForceResendingToken){
                 super.onCodeSent(verificationId,token)
@@ -78,9 +78,11 @@ class Otp: Fragment() {
      private fun verify(){
 
          val phoneNo = type_phoneno.text.toString()
+         if(phoneNo.isEmpty()){
+             Toast.makeText(context,"Please fill your phone number",Toast.LENGTH_SHORT).show()
+             return
+         }
          verificationcallbacks()
-         Log.d("this1",phoneNo)
-         Log.d("this1","CallBackStarted")
          activity?.let {
              PhoneAuthProvider.getInstance().verifyPhoneNumber(
                  phoneNo,
@@ -89,7 +91,6 @@ class Otp: Fragment() {
                  it,
                  mcallbacks)
          }
-         Log.d("this1","Filled phoneno in function")
     }
 
 }

@@ -42,6 +42,10 @@ class VerifyOtp: Fragment() {
 
     private fun authenticate(){
         val code = pinEntryEditText.text.toString()
+        if(code.isEmpty()){
+            Toast.makeText(context,"Please Fill the OTP",Toast.LENGTH_SHORT).show()
+            return
+        }
         val credential = PhoneAuthProvider.getCredential(data,code)
         signInWithPhoneCredential(credential)
     }
@@ -55,9 +59,9 @@ class VerifyOtp: Fragment() {
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                 } else{
-                      Toast.makeText(context,"Failed Verification because $task", Toast.LENGTH_SHORT).show()
+                      Toast.makeText(context,"Verification Failed! Try again after some time $task", Toast.LENGTH_SHORT).show()
                     if (task.exception is FirebaseAuthInvalidCredentialsException){
-                        //    Toast.makeText(this,"Wrong OTP Entered", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context,"Wrong OTP Entered", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
