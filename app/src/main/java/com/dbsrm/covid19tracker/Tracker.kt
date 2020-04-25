@@ -86,7 +86,7 @@ class Tracker: Fragment() {
                         active_cases.text = details.active
                         recovered_cases.text = details.recovered
                         deceased_cases.text = details.deaths
-                        lastUpdatedTime.text = details.lastupdatedtime
+                        lastUpdatedTime.text = "Last Updated Time: "+details.lastupdatedtime
                         for (i in 1 until feed.statewise.size) {
                             val states = feed.statewise[i].state
                             val confirmed = feed.statewise[i].confirmed

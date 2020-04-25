@@ -2,12 +2,14 @@ package com.dbsrm.covid19tracker
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.GsonBuilder
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import com.xwray.groupie.GroupAdapter
@@ -28,10 +30,28 @@ class MainActivity : AppCompatActivity(), ChipNavigationBar.OnItemSelectedListen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         bottomNavigationView = findViewById(R.id.chipNavigationBar)
         bottomNavigationView!!.setOnItemSelectedListener(this)
         bottomNavigationView!!.setItemSelected(R.id.home)
     }
+
+    override fun onStart() {
+        super.onStart()
+        checkIfVerified()
+    }
+
+    private fun checkIfVerified(){
+
+        val uid = FirebaseAuth.getInstance().uid
+
+        if(uid == null){
+            val intent = Intent(this, OTPVerification::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+    }
+
 
     var homeFragment = Home()
     var trackerFragment = Tracker()

@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
@@ -23,10 +23,10 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="250dp"
-        android:layout_height="110dp"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
         android:layout_marginTop="64dp"
-        android:background="@drawable/bottom_nav_back"
+        android:background="@drawable/back1"
         android:gravity="left"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
@@ -46,7 +46,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:textColor="#ffffff"
-        android:text="About the Developer"
+        android:text="Developer"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.48"
@@ -65,17 +65,31 @@
         app:riv_corner_radius="40dp" />
 
     <TextView
-        android:layout_width="180dp"
+        android:id="@+id/textView10"
+        android:layout_width="300dp"
         android:layout_height="35dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Made with Love by Dev Bahl"
-        android:textColor="#ffffff"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Made with     by Dev Bahl"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/roundedImageView"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/roundedImageView"
-        app:layout_constraintTop_toBottomOf="@+id/roundedImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/roundedImageView"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_heart1"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
