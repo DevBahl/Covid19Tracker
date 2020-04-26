@@ -22,7 +22,6 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home.*
-import kotlinx.android.synthetic.main.recycler_home.*
 import java.util.jar.Manifest
 import kotlin.concurrent.fixedRateTimer
 
