@@ -4,4 +4,10 @@
     <string name="string_picker_dialog_title">StringPickerDialog</string>
     <string name="string_picker_dialog_ok">OK</string>
     <string name="string_picker_dialog_cancel">Cancel</string>
+    <string name="general_information">Please understand this is not a professional recommendation, this is based on the guidelines of MOHFW and WHO</string>
+    <string name="question1">Are you experiencing any of these symptoms?</string>
+    <string name="question2">Have you travelled anywhere in last 14 days?</string>
+    <string name="question3">Does any of these apply to you?</string>
+    <string name="answer1">I recently interacted or lived with someone who has tested positive for COVID-19</string>
+    <string name="answer2">I am a healthcare worker and I recently dealt with a COVID-19 confirmed case</string>
 </resources>

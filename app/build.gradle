@@ -55,4 +55,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.alimuzaffar.lib:pinentryedittext:2.0.6'
     implementation 'ru.egslava:MaskedEditText:1.0.5'
+    implementation 'it.emperor.animatedcheckbox:animatedcheckbox:1.0.3'
 }

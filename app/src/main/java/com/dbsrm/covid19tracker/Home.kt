@@ -43,5 +43,10 @@ class Home: Fragment() {
             phoneIntent.setData(Uri.parse("tel:+91-11-23978046"))
             startActivity(phoneIntent)
         }
+
+        take_test_button.setOnClickListener {
+            val selfAssess = SelfAssess()
+            fragmentManager?.beginTransaction()?.replace(R.id.container,selfAssess)?.commit()
+        }
     }
 }
