@@ -19,7 +19,7 @@ class SelfAssess: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        scrollViewSelfAssess.fullScroll(View.FOCUS_UP)
         animaionChecked()
         resultTextView.visibility = View.INVISIBLE
         submit_button.setOnClickListener {
@@ -45,6 +45,7 @@ class SelfAssess: Fragment() {
            else{
                 condition()
                 animaionChecked()
+                scrollViewSelfAssess.fullScroll(View.FOCUS_DOWN)
             }
         }
     }

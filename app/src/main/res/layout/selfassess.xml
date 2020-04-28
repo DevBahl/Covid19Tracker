@@ -4,312 +4,380 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/scrollViewSelfAssess"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="@string/general_information"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="380dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="80dp"
-            android:text="@string/question1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.069"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Cough"
-            app:layout_constraintEnd_toStartOf="@+id/animatedCheckBox1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/textView26"
-            app:layout_constraintHorizontal_bias="0.147"
-            app:layout_constraintStart_toStartOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Fever"
-            app:layout_constraintStart_toEndOf="@+id/animatedCheckBox1"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView29"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Difficulty in breathing"
-            app:layout_constraintStart_toEndOf="@+id/animatedCheckBox2"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckbox3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView30"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="None"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/animatedCheckbox3"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox4"
-            android:layout_width="40dp"
-            android:layout_marginEnd="20dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/textView31"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="380dp"
-            android:layout_height="40dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="340dp"
+            android:layout_height="100dp"
             android:layout_marginTop="40dp"
-            android:text="@string/question2"
-            app:layout_constraintEnd_toEndOf="@+id/animatedCheckBox4"
+            android:background="@drawable/bottom_nav_back"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Yes"
-            app:layout_constraintStart_toStartOf="@+id/textView32"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="@string/general_information"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckbox5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView33"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textView34"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="No"
-            app:layout_constraintStart_toEndOf="@+id/animatedCheckbox5"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bottom_nav_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox6"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView34"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="@string/question1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView35"
-            android:layout_width="380dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/question3"
-            app:layout_constraintEnd_toEndOf="@+id/animatedCheckBox6"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView33"
-            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Cough"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/animatedCheckBox1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView26"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <TextView
-            android:id="@+id/textView36"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/answer1"
-            app:layout_constraintStart_toStartOf="@+id/textView35"
-            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView26"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/textView26"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox7"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView36"
-            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Fever"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/animatedCheckBox1"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <TextView
-            android:id="@+id/textView37"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/answer2"
-            app:layout_constraintStart_toStartOf="@+id/textView36"
-            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView29"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox8"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView37"
-            app:layout_constraintTop_toBottomOf="@+id/animatedCheckBox7" />
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="Difficulty in breathing"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/animatedCheckBox2"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <TextView
-            android:id="@+id/textView38"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="None of the above"
-            app:layout_constraintStart_toStartOf="@+id/textView37"
-            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckbox3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <it.emperor.animatedcheckbox.AnimatedCheckBox
-            android:id="@+id/animatedCheckBox9"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:acb_animation_duration="500"
-            app:acb_border_checked_color="#000"
-            app:acb_border_checked_stroke_width="2dp"
-            app:acb_border_not_checked_color="#0f0"
-            app:acb_checked="true"
-            app:acb_circle_color="#f00"
-            app:acb_hook_color="#00f"
-            app:acb_hook_stroke_width="2dp"
-            app:acb_padding="10dp"
-            app:layout_constraintStart_toEndOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/animatedCheckBox8" />
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="None"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/animatedCheckbox3"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="350dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bottom_nav_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="@string/question2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Yes"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textView32"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView34"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="No"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/animatedCheckbox5"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckbox5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bottom_nav_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="@string/question3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/answer1"
+                app:layout_constraintStart_toStartOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/animatedCheckBox7" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/answer2"
+                app:layout_constraintStart_toStartOf="@+id/textView36"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:paddingStart="10dp"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:text="None of the above"
+                app:layout_constraintStart_toStartOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView38"
+                app:layout_constraintTop_toBottomOf="@+id/animatedCheckBox8" />
+
+            <it.emperor.animatedcheckbox.AnimatedCheckBox
+                android:id="@+id/animatedCheckBox7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                app:acb_animation_duration="500"
+                app:acb_border_checked_color="#000"
+                app:acb_border_checked_stroke_width="2dp"
+                app:acb_border_not_checked_color="#0f0"
+                app:acb_checked="true"
+                app:acb_circle_color="#f00"
+                app:acb_hook_color="#00f"
+                app:acb_hook_stroke_width="2dp"
+                app:acb_padding="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/submit_button"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginTop="8dp"
             android:text="Submit"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/animatedCheckBox9" />
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:background="@drawable/back1"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
         <TextView
             android:id="@+id/resultTextView"
