@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import it.emperor.animatedcheckbox.binding.setChecked
 import kotlinx.android.synthetic.main.selfassess.*
 
 class SelfAssess: Fragment() {
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.selfassess,container,false)
@@ -17,12 +19,38 @@ class SelfAssess: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         animaionChecked()
         resultTextView.visibility = View.INVISIBLE
         submit_button.setOnClickListener {
-            condition()
+            if(animatedCheckBox4.isChecked()&& animatedCheckBox1.isChecked()){
+                Toast.makeText(context,"Choose Appropriate Options",Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckBox4.isChecked()&& animatedCheckBox2.isChecked()) {
+                Toast.makeText(context, "Choose Appropriate Options", Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckBox4.isChecked()&& animatedCheckbox3.isChecked()) {
+                Toast.makeText(context, "Choose Appropriate Options", Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckbox5.isChecked() && animatedCheckBox6.isChecked()){
+                Toast.makeText(context,"Choose Appropriate Options",Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckBox9.isChecked() && animatedCheckBox7.isChecked()){
+                Toast.makeText(context,"Choose Appropriate Options",Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckBox9.isChecked() && animatedCheckBox8.isChecked()) {
+                Toast.makeText(context, "Choose Appropriate Options", Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }
+           else{
+                condition()
+                animaionChecked()
+            }
         }
     }
+
+
+
     private fun condition(){
         if(animatedCheckBox1.isChecked()||animatedCheckBox2.isChecked()||animatedCheckbox3.isChecked()){
             if(animatedCheckbox5.isChecked()){

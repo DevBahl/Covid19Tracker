@@ -329,6 +329,5 @@
             app:layout_constraintTop_toBottomOf="@+id/submit_button" />
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
