@@ -81,6 +81,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView27"
         app:pinAnimationType="popIn" />
 
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:id="@+id/loadanim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:animDelay="150"
+        app:animDistance="10dp"
+        app:animDuration="500"
+        app:animInterpolator="accelerateDecelerate"
+        app:circleMargin="8dp"
+        app:circleRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
     <Button
         android:id="@+id/getotp_btn"
         android:layout_width="120dp"
@@ -137,6 +154,7 @@
         app:layout_constraintTop_toBottomOf="@+id/getotp_btn" />
 
     <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView9"
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_marginTop="24dp"

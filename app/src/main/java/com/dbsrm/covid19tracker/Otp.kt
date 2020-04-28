@@ -1,6 +1,9 @@
 package com.dbsrm.covid19tracker
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.Log
@@ -8,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.google.android.gms.common.internal.safeparcel.SafeParcelReader.createBundle
 import com.google.android.gms.tasks.Task
@@ -25,6 +29,8 @@ class Otp: Fragment() {
     private lateinit var mAuth: FirebaseAuth
     var verificationid = ""
     lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
+    var connectivity: ConnectivityManager? = null
+    var info: NetworkInfo? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.otpfragment,container,false)
     }
@@ -37,13 +43,18 @@ class Otp: Fragment() {
         verify_otp.visibility = View.INVISIBLE
         resend_otp.visibility = View.INVISIBLE
         edit_phoneno.visibility = View.INVISIBLE
+        loadanim.visibility = View.INVISIBLE
 
         mAuth = FirebaseAuth.getInstance()
         getotp_btn.setOnClickListener {
             val phoneNo = type_phoneno.text.toString()
             if(phoneNo.isEmpty() or(phoneNo.length<13)){
                 Toast.makeText(context,"Please check your phone number",Toast.LENGTH_SHORT).show()
-            }else{
+            }
+            else if(isConnected()==false){
+                Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
+            }
+            else{
                 verify()
                 textView23.visibility = View.INVISIBLE
                 type_phoneno.visibility = View.INVISIBLE
@@ -56,7 +67,11 @@ class Otp: Fragment() {
             }
         }
         verify_otp.setOnClickListener {
-            authenticate()
+            if(isConnected()==false){
+            Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
+        }else{
+                authenticate()
+            }
         }
 
         edit_phoneno.setOnClickListener {
@@ -71,9 +86,25 @@ class Otp: Fragment() {
         }
 
         resend_otp.setOnClickListener {
-            resendCode()
-
+            if(isConnected()==false){
+                Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
+            }else{
+                resendCode()
+            }
         }
+    }
+
+    fun isConnected(): Boolean{
+         connectivity = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if(connectivity!=null){
+            info = connectivity?.activeNetworkInfo
+            if (info!= null){
+                if (info?.state == NetworkInfo.State.CONNECTED){
+                    return true
+                }
+            }
+        }
+        return false
     }
 
     fun verify(){
@@ -149,6 +180,7 @@ class Otp: Fragment() {
     }
 
     fun signInWithPhoneCredential(credential: PhoneAuthCredential){
+        loadanim.visibility = View.VISIBLE
         mAuth.signInWithCredential(credential)
             .addOnCompleteListener { task: Task<AuthResult> ->
                 if(task.isSuccessful){
@@ -157,8 +189,9 @@ class Otp: Fragment() {
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                 } else{
-                    // Toast.makeText(context,"Verification Failed! Try again after some time $task", Toast.LENGTH_SHORT).show()
+                    loadanim.visibility = View.INVISIBLE
                     if (task.exception is FirebaseAuthInvalidCredentialsException){
+                        loadanim.visibility = View.INVISIBLE
                         Toast.makeText(context,"Invalid OTP Entered", Toast.LENGTH_SHORT).show()
                     }
                 }

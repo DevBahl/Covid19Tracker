@@ -7,6 +7,7 @@ import android.os.Message
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.GsonBuilder
 import com.xwray.groupie.GroupAdapter
@@ -35,6 +36,9 @@ class Tracker: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (Otp().isConnected()==false){
+            Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
+        }
         recyclerViewMain.adapter = adapter
         fetchJson()
     }
