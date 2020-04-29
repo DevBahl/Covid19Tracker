@@ -23,6 +23,7 @@ class SelfAssess: Fragment() {
         animaionChecked()
         resultTextView.visibility = View.INVISIBLE
         submit_button.setOnClickListener {
+            resultTextView.visibility = View.INVISIBLE
             if(animatedCheckBox4.isChecked()&& animatedCheckBox1.isChecked()){
                 Toast.makeText(context,"Choose Appropriate Options",Toast.LENGTH_LONG).show()
                 animaionChecked()
@@ -41,6 +42,15 @@ class SelfAssess: Fragment() {
             }else if(animatedCheckBox9.isChecked() && animatedCheckBox8.isChecked()) {
                 Toast.makeText(context, "Choose Appropriate Options", Toast.LENGTH_LONG).show()
                 animaionChecked()
+            }else if(animatedCheckBox1.isChecked() == false && animatedCheckBox2.isChecked() == false && animatedCheckbox3.isChecked() == false && animatedCheckBox4.isChecked() == false && animatedCheckbox5.isChecked() == false && animatedCheckBox6.isChecked() == false && animatedCheckBox7.isChecked() == false && animatedCheckBox8.isChecked() == false && animatedCheckBox9.isChecked() == false){
+                Toast.makeText(context,"Please answer all the questions to do the self assessment",Toast.LENGTH_LONG).show()
+                animaionChecked()
+            }else if(animatedCheckBox1.isChecked() == false && animatedCheckBox2.isChecked() == false && animatedCheckbox3.isChecked() == false && animatedCheckBox4.isChecked() == false){
+                Toast.makeText(context, "Please answer all the questions to do the self assessment", Toast.LENGTH_LONG).show()
+            }else if(animatedCheckbox5.isChecked() == false && animatedCheckBox6.isChecked() == false){
+                Toast.makeText(context, "Please answer all the questions to do the self assessment", Toast.LENGTH_LONG).show()
+            }else if(animatedCheckBox7.isChecked() == false && animatedCheckBox8.isChecked() == false && animatedCheckBox9.isChecked() == false){
+                Toast.makeText(context, "Please answer all the questions to do the self assessment", Toast.LENGTH_LONG).show()
             }
            else{
                 condition()

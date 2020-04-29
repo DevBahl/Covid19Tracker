@@ -10,5 +10,5 @@
     <string name="question3">Does any of these apply to you?</string>
     <string name="answer1">I recently interacted or lived with someone who has tested positive for COVID-19</string>
     <string name="answer2">I am a healthcare worker and I recently dealt with a COVID-19 confirmed case</string>
-    <string name="about">This app is made to spread awareness about COVID-19 and is dedicated to all the Frontline workers working day night to save lives</string>
+    <string name="about">This app is made to spread awareness about COVID-19 and is dedicated to all the frontline workers working day and night to save lives</string>
 </resources>
