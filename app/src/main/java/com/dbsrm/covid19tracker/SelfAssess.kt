@@ -60,8 +60,6 @@ class SelfAssess: Fragment() {
         }
     }
 
-
-
     private fun condition(){
         if(animatedCheckBox1.isChecked()||animatedCheckBox2.isChecked()||animatedCheckbox3.isChecked()){
             if(animatedCheckbox5.isChecked()){
