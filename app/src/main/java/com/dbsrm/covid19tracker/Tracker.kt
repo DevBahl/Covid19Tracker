@@ -1,5 +1,8 @@
 package com.dbsrm.covid19tracker
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -28,6 +31,8 @@ import java.util.concurrent.TimeUnit
 class Tracker: Fragment() {
 
     var v: View? = null
+    var connectivity: ConnectivityManager? = null
+    var info: NetworkInfo? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.tracker, container, false)
         return v
@@ -37,7 +42,11 @@ class Tracker: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerViewMain.adapter = adapter
-        fetchJson()
+        if(isConnected()==false){
+            Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
+        }else{
+            fetchJson()
+        }
     }
 
 
@@ -56,6 +65,19 @@ class Tracker: Fragment() {
             viewHolder.itemView.recoveredstates.text = text3
             viewHolder.itemView.deceasedstates.text = text4
         }
+    }
+
+    fun isConnected(): Boolean{
+        connectivity = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if(connectivity!=null){
+            info = connectivity?.activeNetworkInfo
+            if (info!= null){
+                if (info?.state == NetworkInfo.State.CONNECTED){
+                    return true
+                }
+            }
+        }
+        return false
     }
 
 

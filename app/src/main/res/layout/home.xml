@@ -406,16 +406,36 @@
                 android:id="@+id/textView15"
                 android:layout_width="220dp"
                 android:layout_height="40dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
                 android:layout_marginTop="45dp"
-                android:text="Donate to the PM cares fund
-                and help fight this virus"
+                android:text="Click here to know more
+                about PM CARES Fund"
                 android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="@+id/textView14"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView14"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
+            <me.ibrahimsn.lib.CirclesLoadingView
+                android:id="@+id/loadinganim2"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="8dp"
+                app:animDelay="150"
+                app:animDistance="10dp"
+                app:animDuration="500"
+                app:animInterpolator="accelerateDecelerate"
+                app:circleMargin="8dp"
+                app:circleRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/roundedImageView2"
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:background="@drawable/bottom_nav_back"
