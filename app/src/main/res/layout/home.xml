@@ -240,7 +240,7 @@
                         android:layout_width="90dp"
                         android:layout_height="40dp"
                         android:gravity="center"
-                        android:text="Shortness of Breathe"
+                        android:text="Difficulty in Breathing"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView2"
                         app:layout_constraintStart_toStartOf="@+id/lottieAnimationView2"

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#1b1919">
 
 
     <TextView
@@ -13,152 +14,201 @@
         android:layout_marginTop="24dp"
         android:gravity="center"
         android:text="NoCo"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
         app:layout_constraintHorizontal_bias="0.060"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="400dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Please Verify your phone number! So that we know it's you"
-        android:textSize="12sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/ic_nocologo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="400dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:text="Please type the otp sent on your phone number below"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <br.com.sapereaude.maskedEditText.MaskedEditText
-        android:id="@+id/type_phoneno"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:inputType="phone"
-        android:typeface="monospace"
-        app:allowed_chars="1234567890"
-        app:layout_constraintEnd_toEndOf="@+id/textView23"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView23"
-        app:mask="+91##########" />
-
-
-    <com.alimuzaffar.lib.pin.PinEntryEditText
-        android:id="@+id/pinEntryEditText"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:cursorVisible="false"
-        android:digits="1234567890"
-        android:inputType="number"
-        android:maxLength="6"
-        android:textIsSelectable="false"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:pinAnimationType="popIn" />
-
-    <me.ibrahimsn.lib.CirclesLoadingView
-        android:id="@+id/loadanim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:animDelay="150"
-        app:animDistance="10dp"
-        app:animDuration="500"
-        app:animInterpolator="accelerateDecelerate"
-        app:circleMargin="8dp"
-        app:circleRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.47" />
 
-    <Button
-        android:id="@+id/getotp_btn"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="40dp"
-        android:text="Get OTP"
-        app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="@+id/type_phoneno"
-        app:layout_constraintTop_toBottomOf="@+id/type_phoneno" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout9"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bottom_nav_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22">
 
-    <Button
-        android:id="@+id/verify_otp"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
-        android:text="Verify Otp"
-        app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
-        app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="400dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Please Verify your phone number! So that we know it's you"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/resend_otp"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
-        android:text="Resend OTP"
-        app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
-        app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="400dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Please type the otp sent on your phone number below"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/edit_phoneno"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:text="Edit Phone Number"
-        app:layout_constraintEnd_toEndOf="@+id/resend_otp"
-        app:layout_constraintStart_toStartOf="@+id/verify_otp"
-        app:layout_constraintTop_toBottomOf="@+id/verify_otp" />
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/type_phoneno"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:inputType="phone"
+            android:typeface="monospace"
+            app:allowed_chars="1234567890"
+            app:layout_constraintEnd_toEndOf="@+id/textView23"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            app:mask="+91##########" />
+
+
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/pinEntryEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            app:pinAnimationType="popIn" />
+
+        <me.ibrahimsn.lib.CirclesLoadingView
+            android:id="@+id/loadanim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:animDelay="150"
+            app:animDistance="10dp"
+            app:animDuration="500"
+            app:animInterpolator="accelerateDecelerate"
+            app:circleMargin="8dp"
+            app:circleRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:isHideTimeBackground="true"
+            app:isShowSecond="true"
+            app:isTimeTextBold="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.852"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_phoneno"
+            app:suffixGravity="bottom"
+            app:suffixSecond="s"
+            app:suffixTextColor="#000000"
+            app:suffixTextSize="12sp"
+            app:timeTextColor="#000000"
+            app:timeTextSize="22sp" />
+
+        <Button
+            android:id="@+id/getotp_btn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="40dp"
+            android:text="Get OTP"
+            android:textColor="#ffffff"
+            android:background="@drawable/test_btn_back"
+            app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
+            app:layout_constraintHorizontal_bias="0.008"
+            app:layout_constraintStart_toStartOf="@+id/type_phoneno"
+            app:layout_constraintTop_toBottomOf="@+id/type_phoneno" />
+
+        <Button
+            android:id="@+id/verify_otp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="44dp"
+            android:text="Verify Otp"
+            android:textColor="#ffffff"
+            android:background="@drawable/test_btn_back"
+            app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
+            app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
+
+        <Button
+            android:id="@+id/resend_otp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="44dp"
+            android:text="Resend OTP"
+            android:textColor="#ffffff"
+            android:background="@drawable/test_btn_back"
+            app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
+            app:layout_constraintHorizontal_bias="0.865"
+            app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
+            app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
+
+        <Button
+            android:id="@+id/edit_phoneno"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:text="Edit Phone Number"
+            android:textColor="#ffffff"
+            android:background="@drawable/test_btn_back"
+            app:layout_constraintEnd_toEndOf="@+id/resend_otp"
+            app:layout_constraintStart_toStartOf="@+id/verify_otp"
+            app:layout_constraintTop_toBottomOf="@+id/verify_otp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
         android:text="We salute to all the Frontline Covid Warriors"
-        app:layout_constraintEnd_toEndOf="@+id/getotp_btn"
-        app:layout_constraintStart_toStartOf="@+id/getotp_btn"
-        app:layout_constraintTop_toBottomOf="@+id/getotp_btn" />
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout9"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView9"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView24"
         app:layout_constraintStart_toStartOf="@+id/textView24"

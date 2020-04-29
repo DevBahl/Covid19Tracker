@@ -19,7 +19,7 @@ class OTPVerification : AppCompatActivity() {
 
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.container1,Otp(),"Otp")
+                .add(R.id.container1,GetStarted(),"Otp")
                 .commit()
 
     }

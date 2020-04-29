@@ -57,4 +57,5 @@ dependencies {
     implementation 'ru.egslava:MaskedEditText:1.0.5'
     implementation 'it.emperor.animatedcheckbox:animatedcheckbox:1.0.3'
     implementation 'com.github.ibrahimsn98:CirclesLoadingView:1.0'
+    implementation 'com.github.iwgang:countdownview:2.1.6'
 }

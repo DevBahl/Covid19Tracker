@@ -36,9 +36,6 @@ class Tracker: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (Otp().isConnected()==false){
-            Toast.makeText(context,"Please Connect To The Internet! You are disconnected",Toast.LENGTH_LONG).show()
-        }
         recyclerViewMain.adapter = adapter
         fetchJson()
     }

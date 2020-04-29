@@ -44,6 +44,7 @@ class Otp: Fragment() {
         resend_otp.visibility = View.INVISIBLE
         edit_phoneno.visibility = View.INVISIBLE
         loadanim.visibility = View.INVISIBLE
+        countdown.visibility = View.INVISIBLE
 
         mAuth = FirebaseAuth.getInstance()
         getotp_btn.setOnClickListener {
@@ -136,6 +137,8 @@ class Otp: Fragment() {
 
     fun verificationcallbacks()
     {
+       // countdown.visibility = View.VISIBLE
+       // countdown.start(60000)
         mcallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
