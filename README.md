@@ -13,5 +13,5 @@ App includes:
 6) Safety Measures
 7) For Verification of User, phone verification is done via OTP
 
-To download and try the application please visit the link below:
+To download and try the application please visit this link:
 https://drive.google.com/open?id=13f6iJoe7LyVHi8a-kEGum9OBJwENiA0g
