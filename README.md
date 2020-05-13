@@ -6,16 +6,16 @@ App has a good UI designed on Adobe XD and then implemented in XML.
 
 App includes:
 1) Covid-19 Live Cases Tracker(used an API to fetch data)
-<img src="">
+<img src="ReadmeImages/ss2.jpg">
 2) Self Assessment Test
-<img src="">
-3) About PM Cares Fund using Web View
-<img src="">
-4) Calling Helpline feature from the app
-<img src="ReadmeImages/ss1.jpg" width = "100" height="100">
+<img src="ReadmeImages/ss3.jpg">
+3) Calling Helpline feature from the app 
+<img src="ReadmeImages/ss1.jpg">
+4) About PM Cares Fund using Web View
+<img src="ReadmeImages/ss5.jpg">
 5) Symptoms
 6) Safety Measures
-<img src="">
+<img src="ReadmeImages/ss4.jpg">
 7) For Verification of User, phone verification is done via OTP
 
 To download and try the application please visit this link:
